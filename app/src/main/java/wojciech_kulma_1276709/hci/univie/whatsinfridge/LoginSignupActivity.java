@@ -33,11 +33,10 @@ public class LoginSignupActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get the view from main.xml
-        setContentView(R.layout.main);
+        setContentView(R.layout.loginsignup);
         // Locate EditTexts in main.xml
-     //   username = (EditText) findViewById(R.id.username);
-       // password = (EditText) findViewById(R.id.password);
-
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
 
         // Locate Buttons in main.xml
         loginbutton = (Button) findViewById(R.id.login);
@@ -48,8 +47,8 @@ public class LoginSignupActivity extends Activity {
 
             public void onClick(View arg0) {
                 // Retrieve the text entered from the EditText
-                usernametxt = "afdoiejf"; // username.getText().toString();
-                passwordtxt = "ewfijeroifj"; // password.getText().toString();
+                usernametxt = username.getText().toString();
+                passwordtxt = password.getText().toString();
 
                 // Send data to Parse.com for verification
                 ParseUser.logInInBackground(usernametxt, passwordtxt,
